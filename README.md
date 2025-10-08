@@ -16,7 +16,7 @@ The design highlights the **Professional plan**, making it stand out visually.
 ---
 
 ##  Preview
-![Pricing Component Screenshot]("https://github.com/user-attachments/assets/3994c7b4-2d82-4139-96dc-fecaed451446")
+![Pricing Component Screenshot](https://github.com/user-attachments/assets/126c8dec-ce83-433c-9471-14532299b608)
 
 
 ---
