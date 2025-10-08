@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7ff;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 600px;
+  width: 600px;
+  background-image: url(/bg-top.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+body::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 300px;
+  width: 300px;
+  background-image: url(/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+header h1 {
+  color: hsl(232, 13%, 33%);
+}
+.toggle-switch {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0 40px 0;
+  align-items: center;
+}
+.Annualy,
+.Monthly {
+  color: hsl(233, 13%, 49%);
+  font-weight: 600;
+}
+.toggle {
+  height: 35px;
+  width: 60px;
+  border-radius: 20px;
+  background-color: hsl(238, 63%, 64%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.circle {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: 3px;
+  transition: all 0.3s ease-in;
+}
+.toggle.active .circle {
+  transform: translateX(29px);
+}
+.toggle.active {
+  background-color: hsl(237, 73%, 79%);
+}
+.pricing-scheme {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pricing-box {
+  text-align: center;
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
+}
+.pricing-box:hover {
+  cursor: pointer;
+}
+.basic {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: white;
+  padding: 40px;
+}
+.basic .price {
+  color: hsl(232, 13%, 33%);
+}
+.pricing-box h2 {
+  font-size: 1rem;
+  color: hsl(233, 13%, 49%);
+}
+.price {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: opacity 0.3s ease-in;
+}
+.storage,
+.users,
+.GB {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.basic p {
+  border-bottom: 1px solid #e0e0e0;
+  color: hsl(233, 13%, 49%);
+}
+.basic button {
+  background: linear-gradient(to right, hsl(237, 73%, 79%), hsl(238, 63%, 64%));
+  color: white;
+}
+.basic button:hover {
+  background: white;
+  border: 2px solid hsl(238, 63%, 64%);
+  color: hsl(238, 63%, 64%);
+}
+.common-button {
+  width: 100%;
+  margin: 25px 0 0 0;
+  height: 2.5rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.Professional {
+  background-color: #979ced; /* padding: 40px; */
+  padding: 60px 40px;
+  transform: scale(1.05);
+  border-radius: 10px; /* smooth corners */
+}
+.Professional p {
+  border-bottom: 1px solid white;
+  color: white;
+}
+.Professional .price {
+  color: white;
+}
+.Professional h2 {
+  color: white;
+}
+.Professional button {
+  background-color: white;
+  color: hsl(238, 63%, 64%);
+}
+.Professional button:hover {
+  background-color: #979ced;
+  border: 2px solid white;
+  color: white;
+}
+.master {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: white;
+  padding: 40px;
+}
+.master p {
+  border-bottom: 1px solid #e0e0e0;
+  color: hsl(233, 13%, 49%);
+}
+.master .price {
+  color: hsl(232, 13%, 33%);
+}
+.master button {
+  background: linear-gradient(to right, hsl(237, 73%, 79%), hsl(238, 63%, 64%));
+  color: white;
+}
+.master button:hover {
+  background: white;
+  border: 2px solid hsl(238, 63%, 64%);
+  color: hsl(238, 63%, 64%);
+}
+.fade {
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+@media (max-width: 1100px) {
+  body::before {
+    height: 300px;
+    width: 300px;
+  }
+  body::after {
+    height: 150px;
+    width: 150px;
+  }
+
+  .pricing-scheme {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /*  centers them horizontally */
+  }
+  .basic,
+  .master,
+  .Professional {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .pricing-box {
+    width: 100%;
+    max-width: 400px; /*  prevents them from being too big */
+    margin: 0 auto; /*  ensures they center */
+  }
+  .Professional {
+    transform: none;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .pricing-box {
+    width: 100%;
+    max-width: 300px; /*  prevents them from being too big */
+  }
+  .price {
+    font-size: 3rem;
+  }
+}
